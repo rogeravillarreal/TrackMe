@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EE2A58F01F829DE600C9134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A58EF1F829DE600C9134E /* AppDelegate.swift */; };
-		EE2A58F21F829DE600C9134E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A58F11F829DE600C9134E /* ViewController.swift */; };
+		EE2A58F21F829DE600C9134E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A58F11F829DE600C9134E /* HomeViewController.swift */; };
 		EE2A58F51F829DE600C9134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2A58F31F829DE600C9134E /* Main.storyboard */; };
 		EE2A58F81F829DE600C9134E /* TrackMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE2A58F61F829DE600C9134E /* TrackMe.xcdatamodeld */; };
 		EE2A58FA1F829DE600C9134E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2A58F91F829DE600C9134E /* Assets.xcassets */; };
 		EE2A58FD1F829DE600C9134E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2A58FB1F829DE600C9134E /* LaunchScreen.storyboard */; };
+		EE2A59051F82A94400C9134E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A59041F82A94400C9134E /* Test.swift */; };
+		EED6E3181F82BB4A00E40E18 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6E3171F82BB4A00E40E18 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE2A58EC1F829DE600C9134E /* TrackMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2A58EF1F829DE600C9134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE2A58F11F829DE600C9134E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE2A58F11F829DE600C9134E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE2A58F41F829DE600C9134E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE2A58F71F829DE600C9134E /* TrackMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackMe.xcdatamodel; sourceTree = "<group>"; };
 		EE2A58F91F829DE600C9134E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE2A58FC1F829DE600C9134E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE2A58FE1F829DE600C9134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE2A59041F82A94400C9134E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		EED6E3171F82BB4A00E40E18 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				EE2A58EF1F829DE600C9134E /* AppDelegate.swift */,
-				EE2A58F11F829DE600C9134E /* ViewController.swift */,
+				EE2A58F11F829DE600C9134E /* HomeViewController.swift */,
 				EE2A58F31F829DE600C9134E /* Main.storyboard */,
+				EED6E3171F82BB4A00E40E18 /* TestViewController.swift */,
+				EE2A59041F82A94400C9134E /* Test.swift */,
 				EE2A58F91F829DE600C9134E /* Assets.xcassets */,
 				EE2A58FB1F829DE600C9134E /* LaunchScreen.storyboard */,
 				EE2A58FE1F829DE600C9134E /* Info.plist */,
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE2A58F21F829DE600C9134E /* ViewController.swift in Sources */,
+				EED6E3181F82BB4A00E40E18 /* TestViewController.swift in Sources */,
+				EE2A58F21F829DE600C9134E /* HomeViewController.swift in Sources */,
+				EE2A59051F82A94400C9134E /* Test.swift in Sources */,
 				EE2A58F81F829DE600C9134E /* TrackMe.xcdatamodeld in Sources */,
 				EE2A58F01F829DE600C9134E /* AppDelegate.swift in Sources */,
 			);
@@ -279,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6H462SWUW;
 				INFOPLIST_FILE = TrackMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TrackMe;
@@ -293,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6H462SWUW;
 				INFOPLIST_FILE = TrackMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TrackMe;
