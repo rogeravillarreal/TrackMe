@@ -60,8 +60,17 @@ class TestDisplayViewController: UIViewController, UITableViewDelegate, UITableV
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
-        let nextVC = segue.destination as! TestViewController
-        nextVC.test = sender as? Test
+        if segue.identifier == "addSegue",
+            let nextVC = segue.destination as? TestViewController {
+                nextVC.delegate = self
+                nextVC.test = sender as? Test
+        }
      }
     
+}
+
+extension TestDisplayViewController: TestViewControllerDelegate {
+    func didFinish(_ testViewController: TestViewController) {
+        navigationController?.popViewController(animated: true)
+    }
 }

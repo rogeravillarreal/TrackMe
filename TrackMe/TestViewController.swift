@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol TestViewControllerDelegate: class {
+    func didFinish(_ testViewController: TestViewController)
+}
+
 class TestViewController: UIViewController {
     
+    weak var delegate: TestViewControllerDelegate?
     var test: Test?
     
     // MARK: - Properties
@@ -50,10 +55,10 @@ class TestViewController: UIViewController {
         }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        navigationController?.popViewController(animated: true)
+        delegate?.didFinish(self)
     }
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        defer { navigationController?.popViewController(animated: true) }
+        defer { delegate?.didFinish(self) }
         guard let test = test else { return }
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
