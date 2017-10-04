@@ -1,6 +1,6 @@
 //
 //  TestViewController.swift
-//  TrackMe
+//  Trackme
 //
 //  Created by Roger Villarreal on 10/2/17.
 //  Copyright © 2017 Roger Villarreal. All rights reserved.
@@ -8,46 +8,64 @@
 
 import UIKit
 
-class TestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TestViewController: UIViewController {
     
-    var testResults: [Test] = []
+    var test: Test? = nil
     
-    @IBOutlet weak var testTableView: UITableView!
+    // MARK: - Properties
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var testNameTextField: UITextField!
+    @IBOutlet weak var resultTextField: UITextField!
+    @IBOutlet weak var deleteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testTableView.delegate = self
-        testTableView.dataSource = self
+        if test != nil {
+            testNameTextField.text = test?.name
+            resultTextField.text = String(describing: test!.value)
+            addButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    // MARK: - Actions
+    @IBAction func addButtonTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        if test != nil {
+            test?.name = testNameTextField.text
+            if let value = Double(resultTextField.text!) {
+                test?.value = value
+            } else {
+                test?.value = 0.0
+            }
+            
+        } else {
+            let test = Test(context: context)
+            test.name = testNameTextField.text
+            if let value = Double(resultTextField.text!) {
+                test.value = value
+            } else {
+                test.value = 0.0
+            }
+        }
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController?.popViewController(animated: true)
+    }
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(test!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController?.popViewController(animated: true)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // iterate through the test keys and set the text label
-        // iterate throught the keys and set the detail text
-        let cell = UITableViewCell()
-        let test = testResults[indexPath.row]
-        cell.textLabel?.text = String(describing: test.a1c)
-        cell.detailTextLabel?.text = "Result of Lab exam"
-        return cell
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

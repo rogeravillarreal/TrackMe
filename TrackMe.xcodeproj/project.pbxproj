@@ -13,8 +13,8 @@
 		EE2A58F81F829DE600C9134E /* TrackMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE2A58F61F829DE600C9134E /* TrackMe.xcdatamodeld */; };
 		EE2A58FA1F829DE600C9134E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2A58F91F829DE600C9134E /* Assets.xcassets */; };
 		EE2A58FD1F829DE600C9134E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2A58FB1F829DE600C9134E /* LaunchScreen.storyboard */; };
-		EE2A59051F82A94400C9134E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A59041F82A94400C9134E /* Test.swift */; };
-		EED6E3181F82BB4A00E40E18 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6E3171F82BB4A00E40E18 /* TestViewController.swift */; };
+		EED6E3181F82BB4A00E40E18 /* TestDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6E3171F82BB4A00E40E18 /* TestDisplayViewController.swift */; };
+		EEF637351F82EA5A0074F0B1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF637341F82EA5A0074F0B1 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		EE2A58F91F829DE600C9134E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE2A58FC1F829DE600C9134E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE2A58FE1F829DE600C9134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE2A59041F82A94400C9134E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		EED6E3171F82BB4A00E40E18 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		EED6E3171F82BB4A00E40E18 /* TestDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDisplayViewController.swift; sourceTree = "<group>"; };
+		EEF637341F82EA5A0074F0B1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 				EE2A58EF1F829DE600C9134E /* AppDelegate.swift */,
 				EE2A58F11F829DE600C9134E /* HomeViewController.swift */,
 				EE2A58F31F829DE600C9134E /* Main.storyboard */,
-				EED6E3171F82BB4A00E40E18 /* TestViewController.swift */,
-				EE2A59041F82A94400C9134E /* Test.swift */,
+				EEF637341F82EA5A0074F0B1 /* TestViewController.swift */,
+				EED6E3171F82BB4A00E40E18 /* TestDisplayViewController.swift */,
 				EE2A58F91F829DE600C9134E /* Assets.xcassets */,
 				EE2A58FB1F829DE600C9134E /* LaunchScreen.storyboard */,
 				EE2A58FE1F829DE600C9134E /* Info.plist */,
@@ -145,10 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED6E3181F82BB4A00E40E18 /* TestViewController.swift in Sources */,
+				EED6E3181F82BB4A00E40E18 /* TestDisplayViewController.swift in Sources */,
 				EE2A58F21F829DE600C9134E /* HomeViewController.swift in Sources */,
-				EE2A59051F82A94400C9134E /* Test.swift in Sources */,
 				EE2A58F81F829DE600C9134E /* TrackMe.xcdatamodeld in Sources */,
+				EEF637351F82EA5A0074F0B1 /* TestViewController.swift in Sources */,
 				EE2A58F01F829DE600C9134E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qju-LF-tT7">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,98 +14,88 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TrackMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asR-Hg-wjQ">
-                                <rect key="frame" x="16" y="113" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Health Records">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="7yG-L3-YJm" kind="show" id="BwK-d6-oYp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmV-Js-DWL">
-                                <rect key="frame" x="204" y="113" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Measurements">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3C-nm-voA">
-                                <rect key="frame" x="16" y="277" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Rx Perscriptions">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwP-hc-2lK">
-                                <rect key="frame" x="204" y="277" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Diet">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYy-Dk-kd9">
-                                <rect key="frame" x="16" y="443" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Exercise">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOh-Vu-eHg">
-                                <rect key="frame" x="204" y="443" width="155" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Recommendations">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-T2-d49">
+                                <rect key="frame" x="8" y="72" width="304" height="488"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TAV-aM-rYd">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="157.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asR-Hg-wjQ" customClass="custom">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="157.5"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Health Records">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="7yG-L3-YJm" kind="show" id="BwK-d6-oYp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmV-Js-DWL">
+                                                <rect key="frame" x="156" y="0.0" width="148" height="157.5"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Measurements">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hee-GV-9Bb">
+                                        <rect key="frame" x="0.0" y="165.5" width="304" height="157"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3C-nm-voA">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="157"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Rx Perscriptions">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwP-hc-2lK">
+                                                <rect key="frame" x="156" y="0.0" width="148" height="157"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Diet">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-ui-4Va">
+                                        <rect key="frame" x="0.0" y="330.5" width="304" height="157.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYy-Dk-kd9">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="157.5"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Exercise">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOh-Vu-eHg">
+                                                <rect key="frame" x="156" y="0.0" width="148" height="157.5"/>
+                                                <color key="backgroundColor" red="0.92046737670898438" green="0.30372276902198792" blue="0.23924525082111359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Recommendations">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dNT-T2-d49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="M1q-KK-MAj"/>
+                            <constraint firstItem="dNT-T2-d49" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="MSQ-Ms-Um2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dNT-T2-d49" secondAttribute="bottom" constant="8" id="Oxp-WB-Ya0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dNT-T2-d49" secondAttribute="trailing" constant="8" id="atQ-6i-zyq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TrackMe" id="CGx-3R-eRy">
@@ -116,16 +106,16 @@
             </objects>
             <point key="canvasLocation" x="260" y="133.5832083958021"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Lab Results-->
         <scene sceneID="URV-BV-3bN">
             <objects>
-                <viewController id="7yG-L3-YJm" customClass="TestViewController" customModule="TrackMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7yG-L3-YJm" customClass="TestDisplayViewController" customModule="TrackMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qb6-t2-4zO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0WM-3w-8Sx">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -138,6 +128,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pCS-fa-Nk8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Lab Results" id="Gue-EE-3g1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rd4-YP-pqf">
+                            <connections>
+                                <segue destination="lUr-53-tje" kind="show" identifier="addSegue" id="0F1-Km-uh3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="testTableView" destination="0WM-3w-8Sx" id="ImT-l9-i6w"/>
                     </connections>
@@ -146,13 +143,75 @@
             </objects>
             <point key="canvasLocation" x="1164" y="133"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="zp9-PX-mxP">
+            <objects>
+                <viewController id="lUr-53-tje" customClass="TestViewController" customModule="TrackMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ID6-OD-BHn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Test..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AL-st-d83">
+                                <rect key="frame" x="30" y="94" width="260" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Result of test..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-Je-fRp">
+                                <rect key="frame" x="30" y="164" width="260" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-YJ-GFC">
+                                <rect key="frame" x="145" y="234" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="lUr-53-tje" eventType="touchUpInside" id="Kb2-gn-r0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anr-Id-jje">
+                                <rect key="frame" x="137.5" y="288" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="lUr-53-tje" eventType="touchUpInside" id="nO3-vQ-oNZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iew-uE-wdF" firstAttribute="trailing" secondItem="5AL-st-d83" secondAttribute="trailing" constant="30" id="4aa-aT-4Ow"/>
+                            <constraint firstItem="wpd-YJ-GFC" firstAttribute="centerX" secondItem="ID6-OD-BHn" secondAttribute="centerX" id="LY6-FY-kRF"/>
+                            <constraint firstItem="5AL-st-d83" firstAttribute="leading" secondItem="iew-uE-wdF" secondAttribute="leading" constant="30" id="Mb0-zp-jj5"/>
+                            <constraint firstItem="wpd-YJ-GFC" firstAttribute="top" secondItem="b5f-Je-fRp" secondAttribute="bottom" constant="40" id="Unp-YL-xk0"/>
+                            <constraint firstItem="anr-Id-jje" firstAttribute="centerX" secondItem="ID6-OD-BHn" secondAttribute="centerX" id="WTv-Fu-dXh"/>
+                            <constraint firstItem="5AL-st-d83" firstAttribute="centerX" secondItem="ID6-OD-BHn" secondAttribute="centerX" id="d4q-1S-3fh"/>
+                            <constraint firstItem="b5f-Je-fRp" firstAttribute="top" secondItem="5AL-st-d83" secondAttribute="bottom" constant="40" id="jCp-BD-qYf"/>
+                            <constraint firstItem="b5f-Je-fRp" firstAttribute="width" secondItem="5AL-st-d83" secondAttribute="width" id="mKR-I0-cH8"/>
+                            <constraint firstItem="anr-Id-jje" firstAttribute="top" secondItem="wpd-YJ-GFC" secondAttribute="bottom" constant="24" id="nFl-HW-oaa"/>
+                            <constraint firstItem="5AL-st-d83" firstAttribute="top" secondItem="iew-uE-wdF" secondAttribute="top" constant="30" id="pa4-MG-ev0"/>
+                            <constraint firstItem="b5f-Je-fRp" firstAttribute="centerX" secondItem="ID6-OD-BHn" secondAttribute="centerX" id="qJJ-mU-uDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iew-uE-wdF"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="wpd-YJ-GFC" id="drc-zz-Bbd"/>
+                        <outlet property="deleteButton" destination="anr-Id-jje" id="dmj-Ao-HPE"/>
+                        <outlet property="resultTextField" destination="b5f-Je-fRp" id="5iL-0l-xFk"/>
+                        <outlet property="testNameTextField" destination="5AL-st-d83" id="AYv-co-iug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSl-Zb-7oN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037.5999999999999" y="131.52709359605913"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="f28-bf-M11">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qju-LF-tT7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KEq-nj-7he">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
