@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol TestViewControllerDelegate: class {
+    func didFinish(_ testViewController: TestViewController)
+}
+
 class TestViewController: UIViewController {
     
-    var test: Test? = nil
+    weak var delegate: TestViewControllerDelegate?
+    var test: Test?
     
     // MARK: - Properties
     @IBOutlet weak var addButton: UIButton!
@@ -21,9 +26,9 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if test != nil {
-            testNameTextField.text = test?.name
-            resultTextField.text = String(describing: test!.value)
+        if let test = test {
+            testNameTextField.text = test.name
+            resultTextField.text = test.value.description
             addButton.setTitle("Update", for: .normal)
         } else {
             deleteButton.isHidden = true
@@ -41,30 +46,24 @@ class TestViewController: UIViewController {
         
         if test != nil {
             test?.name = testNameTextField.text
-            if let value = Double(resultTextField.text!) {
-                test?.value = value
-            } else {
-                test?.value = 0.0
-            }
+            test?.value = Double(resultTextField.text ?? "") ?? 0.0
             
         } else {
             let test = Test(context: context)
             test.name = testNameTextField.text
-            if let value = Double(resultTextField.text!) {
-                test.value = value
-            } else {
-                test.value = 0.0
-            }
+            test.value = Double(resultTextField.text ?? "") ?? 0.0
         }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        navigationController?.popViewController(animated: true)
+        delegate?.didFinish(self)
     }
     @IBAction func deleteButtonTapped(_ sender: Any) {
+        defer { delegate?.didFinish(self) }
+        guard let test = test else { return }
+        
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        context.delete(test!)
+        context.delete(test)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        navigationController?.popViewController(animated: true)
     }
     
 }

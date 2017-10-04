@@ -42,10 +42,10 @@ class TestDisplayViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // iterate through the test keys and set the text label
         // iterate throught the keys and set the detail text
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabResultCell", for: indexPath)
         let test = tests[indexPath.row]
         cell.textLabel?.text = test.name
-        cell.detailTextLabel?.text = String(test.value)
+        cell.detailTextLabel?.text = test.value.description
         return cell
     }
     
@@ -60,8 +60,17 @@ class TestDisplayViewController: UIViewController, UITableViewDelegate, UITableV
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
-        let nextVC = segue.destination as! TestViewController
-        nextVC.test = sender as? Test
+        if segue.identifier == "addSegue",
+            let nextVC = segue.destination as? TestViewController {
+                nextVC.delegate = self
+                nextVC.test = sender as? Test
+        }
      }
     
+}
+
+extension TestDisplayViewController: TestViewControllerDelegate {
+    func didFinish(_ testViewController: TestViewController) {
+        navigationController?.popViewController(animated: true)
+    }
 }
