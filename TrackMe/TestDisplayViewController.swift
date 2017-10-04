@@ -42,10 +42,10 @@ class TestDisplayViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // iterate through the test keys and set the text label
         // iterate throught the keys and set the detail text
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabResultCell", for: indexPath)
         let test = tests[indexPath.row]
         cell.textLabel?.text = test.name
-        cell.detailTextLabel?.text = String(test.value)
+        cell.detailTextLabel?.text = test.value.description
         return cell
     }
     
